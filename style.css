@@ -1,0 +1,107 @@
+/* style.css */
+
+/* Google Fonts: Inter 및 Nanum Myeongjo 폰트 적용 */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-nanum-myeongjo {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+/* 커스텀 애니메이션 정의 */
+
+/* 배경 페이드인 */
+@keyframes fade-in-bg {
+    from { opacity: 0; }
+    to { opacity: 0.9; }
+}
+.animate-fade-in-bg {
+    animation: fade-in-bg 2s ease-out forwards;
+}
+
+/* 텍스트 펄스 */
+@keyframes pulse-text {
+    0% { transform: scale(1); text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+    50% { transform: scale(1.02); text-shadow: 0 0 20px rgba(255,255,255,0.9); }
+    100% { transform: scale(1); text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+}
+.animate-pulse-text {
+    animation: pulse-text 2s infinite ease-in-out;
+}
+
+/* 위에서 아래로 페이드인 */
+@keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-down {
+    animation: fade-in-down 1s ease-out forwards;
+}
+
+/* 아래에서 위로 페이드인 */
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+    animation: fade-in-up 1.2s ease-out forwards;
+}
+
+/* 일반 페이드인 */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fade-in {
+    animation: fade-in 1.5s ease-out forwards;
+}
+
+/* 왼쪽에서 슬라이드인 */
+@keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in-left {
+    animation: slide-in-left 1s ease-out forwards;
+}
+
+/* 오른쪽에서 슬라이드인 */
+@keyframes slide-in-right {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in-right {
+    animation: slide-in-right 1s ease-out forwards;
+}
+
+/* 아래에서 위로 슬라이드인 (섹션용) */
+@keyframes slide-in-section {
+    from { opacity: 0; transform: translateY(100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-in-up {
+    animation: slide-in-section 1s ease-out forwards;
+}
+
+/* 버튼 펄스 */
+@keyframes pulse-button {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+.animate-pulse-button {
+    animation: pulse-button 1.5s infinite ease-in-out;
+}
+
+
+/*
+   여기에 추가적인 `@apply` 지시어를 사용하여
+   Tailwind 유틸리티를 커스텀 클래스로 묶을 수 있습니다.
+
+   예시:
+   .btn-primary {
+       @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+   }
+*/
